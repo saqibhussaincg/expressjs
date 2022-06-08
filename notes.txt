@@ -25,3 +25,18 @@ express.urlencoded()
 next();
 ---------
 next ka mtlb k pehle oper wala function chalega os k baad dsora chalega wese isay use karne ki itni zarurat nahi
+
+
+Routers
+----------
+Routers k liye sara data alag file mai le lenge eg: array of object os k andar data or router ko require kara k use kar lenge get method mai
+
+const { Router } = require('express');
+const router = Router();
+
+
+Main file mai router ko import kara k use karlenge tou wo data wali alag file os path per chalegi jo main app k page per dia hoga
+const groceriesRoute = require('./routes/groceries');
+
+app.use('/api/groceries', groceriesRoute);
+

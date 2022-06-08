@@ -8,7 +8,7 @@ const groceryList = [
         quantity: 2,
     },
     {
-        item: 'ceral',
+        item: 'cereal',
         quantity: 1,
     },  
     {
@@ -20,19 +20,19 @@ const groceryList = [
 
 
 // app ki jagah router laga denge
-router.get('', (req, res) => {
+router.get('/', (req, res) => {
     res.send(groceryList);
 }
 );
 
-router.get(':item', (req, res) => {
+router.get('/:item', (req, res) => {
     // console.log(req.params.item);
     const { item } = req.params; 
     const groceryItem = groceryList.find((g) => g.item === item); // Browser k params mai agar item wali cheez aati hai tou show kara do warna kuch show nahi karao
     res.send(groceryItem);
 })
 
-router.post('', (req, res) => {
+router.post('/', (req, res) => {
     console.log(req.body);
     groceryList.push(req.body); // Postman ko req karo k body se Get mai data push kare
     res.send(201)

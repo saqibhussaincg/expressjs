@@ -3,6 +3,7 @@ const app = express();
 const PORT = 5000;
 
 const groceriesRoute = require('./routes/groceries');
+const marketsRoute = require('./routes/markets');
 
 app.use(express.json());
 app.use(express.urlencoded()); // Activate URL encoded data from POSTMAN
@@ -14,7 +15,10 @@ app.use((req, res, next) => {
     next();
 });
 
+
+// import and then register here
 app.use('/api/groceries', groceriesRoute);
+app.use('/api/markets', marketsRoute);
 
 // http://localhost:5000/api/groceries bauhat sari companies prefix endpoint karti hain api k name se
 

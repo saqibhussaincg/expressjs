@@ -1,0 +1,27 @@
+Get Request 
+-------------------
+get request is just a request method used with http protocol, retrive something on server.
+list of payment, users ata etc.
+
+Req
+-------
+give all information about request
+cookies, headers
+is responsible sending request back to client.
+
+Client ko request send kari k kuch hua order hua ya nahi server se kia response aya.
+Req successfull send status 200
+
+Get Request Retrieving a resource
+Post Request are for Creating a new resource 
+
+
+Middleware
+-----------
+middleware connection or convert karne k kaam kaata hai
+express.json()
+express.urlencoded()
+
+next();
+---------
+next ka mtlb k pehle oper wala function chalega os k baad dsora chalega wese isay use karne ki itni zarurat nahi

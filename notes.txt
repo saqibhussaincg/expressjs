@@ -40,3 +40,8 @@ const groceriesRoute = require('./routes/groceries');
 
 app.use('/api/groceries', groceriesRoute);
 
+
+Query Parameters
+------------------
+
+

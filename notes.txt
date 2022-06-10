@@ -45,3 +45,20 @@ Query Parameters
 ------------------
 
 
+cookies
+------------
+Cookies are small pieces of text sent to your browser by a website you visit. They help that website remember information about your visit, which can both make it easier to visit the site again and make the site more useful to you
+
+var cookieParser = require('cookie-parser')
+app.use(cookieParser())
+
+middleware use karna hoga
+
+console.log(req.cookies);
+console.log(req.headers.cookie);
+
+postman mai cookie generate kar dega 
+postman mai cookies dekhne ka option hota hai
+
+
+

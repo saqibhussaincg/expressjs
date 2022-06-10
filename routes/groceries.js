@@ -2,6 +2,8 @@ const { Router } = require('express');
 
 const router = Router();
 
+
+
 const groceryList = [
     {
         item: 'milk',
@@ -21,12 +23,18 @@ const groceryList = [
 
 // app ki jagah router laga denge
 router.get('/', (req, res) => {
+    res.cookie('visited', true, {
+        maxAge : 60000,
+    });
     res.send(groceryList);
 }
 );
 
 router.get('/:item', (req, res) => {
     // console.log(req.params.item);
+    console.log(req.cookies);
+    console.log(req.headers.cookie);
+
     const { item } = req.params; 
     const groceryItem = groceryList.find((g) => g.item === item); // Browser k params mai agar item wali cheez aati hai tou show kara do warna kuch show nahi karao
     res.send(groceryItem);

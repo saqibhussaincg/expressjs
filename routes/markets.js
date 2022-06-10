@@ -30,6 +30,7 @@ router.get('/', (req, res) => {
 
     // agar miles number nahi hai tou filter karo k supermarket ka data miles se kitna chota hai ya barabar hai or user ko response show karao
     const { miles } = req.query;
+    
     const parsedMiles = parseInt(miles);
     if (!isNaN(parsedMiles)) 
     {
